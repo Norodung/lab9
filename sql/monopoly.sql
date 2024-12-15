@@ -1,6 +1,7 @@
+--
 -- This SQL script builds a monopoly database, deleting any pre-existing version.
 --
--- @author kvlinden, Nana Osei AY
+-- @author kvlinden, Noro Dung
 -- @version Summer, 2015
 --
 
@@ -25,11 +26,11 @@ CREATE TABLE PlayerGame (
 	gameID integer REFERENCES Game(ID), 
 	playerID integer REFERENCES Player(ID),
 	score integer,
-	cash money,
+    cah money,
+    properties integer,
     houses integer,
     hotels integer,
-    properties integer,
-    current_location integer
+    loaction integer,
 	);
 
 -- Allow users to select data from the tables.
@@ -46,11 +47,11 @@ INSERT INTO Player(ID, emailAddress) VALUES (1, 'me@calvin.edu');
 INSERT INTO Player VALUES (2, 'king@gmail.edu', 'The King');
 INSERT INTO Player VALUES (3, 'dog@gmail.edu', 'Dogbreath');
 
-INSERT INTO PlayerGame VALUES (1, 1, 0.00, 7, 8, 5, 7, 6);
-INSERT INTO PlayerGame VALUES (1, 2, 0.00, 2, 1, 4, 5, 9);
-INSERT INTO PlayerGame VALUES (1, 3, 2350.00, 4, 2, 6, 8);
-INSERT INTO PlayerGame VALUES (2, 1, 1000.00, 9, 0, 6, 5);
-INSERT INTO PlayerGame VALUES (2, 2, 0.00, 1, 5, 3, 2, 4);
-INSERT INTO PlayerGame VALUES (2, 3, 500.00, 8, 0, 7, 5, 4);
-INSERT INTO PlayerGame VALUES (3, 2, 0.00, 3, 8, 9, 0, 8);
-INSERT INTO PlayerGame VALUES (3, 3, 5500.00, 7, 0, 7, 8, 9);
+INSERT INTO PlayerGame VALUES (1, 1, 0.00, 1, 2);
+INSERT INTO PlayerGame VALUES (1, 2, 0.00, 3, 4);
+INSERT INTO PlayerGame VALUES (1, 3, 2350.00, 5, 6);
+INSERT INTO PlayerGame VALUES (2, 1, 1000.00, 7, 8);
+INSERT INTO PlayerGame VALUES (2, 2, 0.00, 9, 10);
+INSERT INTO PlayerGame VALUES (2, 3, 500.00, 11, 12);
+INSERT INTO PlayerGame VALUES (3, 2, 0.00, 13, 14);
+INSERT INTO PlayerGame VALUES (3, 3, 5500.00, 15, 16);

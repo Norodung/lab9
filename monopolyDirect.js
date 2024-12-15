@@ -11,7 +11,7 @@
  *      source .env-azure
  *      node monopolyDirect.js
  *
- * @author: kvlinden, ndung
+ * @author: kvlinden
  * @date: Summer, 2020
  * @date: Fall, 2024 - updates for Azure PostgreSQL
  */
